@@ -1,8 +1,10 @@
 # Installation of GitLab CE on a Raspberry Pi 4 (4GB)
 - Install GitLab on a Raspberry Pi 4
 - Configure the GitLab server
-
-<img src="part1.png" width="900">
+<br>
+https://github.com/MikrocontollerProjekte/GitLabRaspberryPi/blob/master/GitLabRaspberryPi.sh
+<br>
+<img src="images/part1.png" width="900">
 
 <br>
 <br>
