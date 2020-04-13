@@ -2,7 +2,7 @@
 - Install GitLab on a Raspberry Pi 4
 - Configure the GitLab server
 
-<img src="images/part1.png" width="400">
+<img src="part1.png" width="900">
 
 <br>
 <br>
