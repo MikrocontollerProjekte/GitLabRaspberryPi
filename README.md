@@ -9,7 +9,7 @@ Download Instructions here: https://github.com/MikrocontollerProjekte/GitLabRasp
 <br>
 <br>
 
-[![YouTube Video](http://img.youtube.com/vi/GbHgK9mSDfk/0.jpg)](http://www.youtube.com/watch?v=GbHgK9mSDfk "STM32 Air Quality Sensor SGP30")
+[![YouTube Video](http://img.youtube.com/vi/VVp0buV-wVM/0.jpg)](http://www.youtube.com/watch?v=VVp0buV-wVM "Installation of GitLab CE on a Raspberry Pi 4 (4GB)")
 
 
 <br>
