@@ -12,4 +12,4 @@ Download Instructions here: https://github.com/MikrocontollerProjekte/GitLabRasp
 
 
 <br>
-For more videos, visite: https://www.youtube.com/c/MikrocontrollerProjekte.
+For more videos, visit: https://www.youtube.com/c/MikrocontrollerProjekte.
