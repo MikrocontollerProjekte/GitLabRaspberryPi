@@ -125,3 +125,116 @@ sudo reboot
 
 
 
+
+
+
+#-------------------------------------------------------------------------------------------------------------------
+
+
+#
+#   Usage of GitLab
+#   - Generate a SSH key pair for authentication
+#   - Create and push a project to your GitLab server
+#   - Clone a project from your GitLab server
+#   - Issues and merge requests example
+#
+#   MikrocontrollerProjekte 2020
+#   https://www.youtube.com/c/MikrocontrollerProjekte
+#
+#   Visite my GitHub page to download this file:	
+#   https://github.com/MikrocontollerProjekte/GitLabRaspberryPi
+#
+#   system requirements:
+#   - install Git (free and open source distributed version control system):  https://git-scm.com/
+#
+
+
+################## SSH Key (RECOMMENDED STEP) ##################
+
+# create an SSH Key for your server (press enter to don't use a keyphrase)
+ssh-keygen -t rsa -b 4096 -C "JohnDoe@gmail.com"
+
+#  ensure that ssh-agent is enabled by running
+eval $(ssh-agent -s)
+
+# add your private key to the SSH registry 
+ssh-add ~/.ssh/id_rsa
+
+# go to SSH directory
+cd ~/.ssh/
+
+# create the config file
+touch config
+
+
+
+################## push a (STM32CubeIDE) project to your GitLab server ##################
+
+# create a new project in GitLab (new project button or plus icon in the navigation bar) http://gitlab/
+
+# copy the SSH repository URL from the GitLab project (Clone button --> Clone with SSH --> Copy URL to clipboard)
+
+# initialize the local STM32CubeIDE project folder as an empty Git repository
+git init
+
+# add the copied SSH repository URL as remote repository where your local repository will be pushed to
+git remote add origin git@192.168.178.35:root/stm32f7_motorctrl.git
+
+# verify the new remote SSH repository URL
+git remote -v
+
+# add all files to your local repository staging area
+git add .
+
+# commit all files that you have staged in your local repository
+git commit -m "first commit - initial project"
+
+# push the changes in your local repository to GitLab
+git push origin master
+
+
+
+################## clone a (STM32CubeIDE) project from your GitLab server ##################
+
+# copy the SSH repository URL from the GitLab project (Clone button --> Clone with SSH --> Copy URL to clipboard)
+
+# clone the project repository into your local STM32CubeIDE workspace
+git clone git@gitlab:stm32f7_motorctrl.git
+
+# import the project into STM32CubeIDE workspace
+
+
+
+################## push a development branch to your GitLab server and merge it into master branch in GitLab ##################
+
+# create the development branch "dev_startup_delay"
+git branch dev_startup_delay
+
+# switch to the development branch 
+git checkout dev_startup_delay
+
+# show the working tree status
+git status
+
+#  add the changed main.c file to your local repository staging area
+git add Core/Scr/main.c
+
+# check the working tree status
+git status
+
+# commit changes that you have staged in your local repository
+git commit -m "add a startup delay"
+
+# push the development branch in your local repository to GitLab
+git push origin dev_startup_delay
+
+# merge the development branch into master branch in GitLab
+
+# switch back to master branch 
+git checkout master
+
+# pull new master to local repository
+git pull origin master
+
+
+
