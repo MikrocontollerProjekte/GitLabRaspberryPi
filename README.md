@@ -35,7 +35,7 @@ Download Instructions here: https://github.com/MikrocontollerProjekte/GitLabRasp
 <br>
 <br>
 
-[![YouTube Video](http://img.youtube.com/vi/VVp0buV-wVM/0.jpg)](http://www.youtube.com/watch?v=VVp0buV-wVM "Installation of GitLab CE on a Raspberry Pi 4 (4GB)")
+[![YouTube Video](http://img.youtube.com/vi/hLQXLQj44gQ/0.jpg)](http://www.youtube.com/watch?v=hLQXLQj44gQ "Usage of GitLab CE on a Raspberry Pi 4 (4GB)")
 
 
 <br>
