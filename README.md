@@ -21,6 +21,7 @@ Download Instructions here: https://github.com/MikrocontollerProjekte/GitLabRasp
 <br>
 <br>
 <br>
+
 # Part 2: Usage of GitLab CE on a Raspberry Pi 4 (4GB)
 - Generate a SSH key pair for authentication
 - Create and push a project to your GitLab server
