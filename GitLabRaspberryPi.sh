@@ -4,7 +4,7 @@
 #   - Configure the GitLab server
 #
 #   MikrocontrollerProjekte 2020
-#   https://www.youtube.com/c/MikrocontrollerProjekte
+#   https://www.youtube.com/watch?v=VVp0buV-wVM
 #
 #   Visite my GitHub page to download this file:	
 #   https://github.com/MikrocontollerProjekte/GitLabRaspberryPi/GitLabRaspberryPi.sh
