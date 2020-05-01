@@ -6,7 +6,7 @@
 #   MikrocontrollerProjekte 2020
 #   https://www.youtube.com/watch?v=VVp0buV-wVM
 #
-#   Visite my GitHub page to download this file:	
+#   Visit my GitHub page to download this file:	
 #   https://github.com/MikrocontollerProjekte/GitLabRaspberryPi/GitLabRaspberryPi.sh
 #
 
@@ -141,7 +141,7 @@ sudo reboot
 #   MikrocontrollerProjekte 2020
 #   https://www.youtube.com/c/MikrocontrollerProjekte
 #
-#   Visite my GitHub page to download this file:	
+#   Visit my GitHub page to download this file:	
 #   https://github.com/MikrocontollerProjekte/GitLabRaspberryPi
 #
 #   system requirements:
