@@ -26,7 +26,6 @@ Download Instructions here: https://github.com/MikrocontollerProjekte/GitLabRasp
 - Generate a SSH key pair for authentication
 - Create and push a project to your GitLab server
 - Clone a project from your GitLab server
-- Issues and merge requests example
 <br>  
 Download Instructions here: https://github.com/MikrocontollerProjekte/GitLabRaspberryPi/blob/master/GitLabRaspberryPi.sh
 <br>
@@ -43,5 +42,31 @@ Download Instructions here: https://github.com/MikrocontollerProjekte/GitLabRasp
 <br>
 <img src="images/part2.png" width="900">
 <br>
+
+<br>
+<br>
+<br>
+
+# Part 3: Usage of GitLab CE on a Raspberry Pi 4 (4GB)
+- Create Issues on GitLab
+- Create a branch to solve an Issue
+- Create a Merge Request to close an Issue
+<br>  
+Download Instructions here: https://github.com/MikrocontollerProjekte/GitLabRaspberryPi/blob/master/GitLabRaspberryPi.sh
+<br>
+<br>
+<b>Full YouTube video tutorial:</b>
+<br>
+<br>
+
+[![YouTube Video](http://img.youtube.com/vi/EGh1zK7B56Q/0.jpg)](http://www.youtube.com/watch?v=EGh1zK7B56Q "Usage of GitLab CE on a Raspberry Pi 4 (4GB)")
+
+
+<br>
+<br>
+<br>
+<img src="images/part3.png" width="900">
+<br>
+
 
 For more videos, visit: https://www.youtube.com/c/MikrocontrollerProjekte.
