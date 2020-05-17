@@ -139,7 +139,8 @@ sudo reboot
 #   - Issues and merge requests example
 #
 #   MikrocontrollerProjekte 2020
-#   https://www.youtube.com/c/MikrocontrollerProjekte
+#   https://youtu.be/hLQXLQj44gQ
+#   https://youtu.be/EGh1zK7B56Q
 #
 #   Visit my GitHub page to download this file:	
 #   https://github.com/MikrocontollerProjekte/GitLabRaspberryPi
