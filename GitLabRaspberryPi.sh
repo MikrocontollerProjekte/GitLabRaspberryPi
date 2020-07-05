@@ -239,3 +239,147 @@ git pull origin master
 
 
 
+
+
+
+#----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+#
+#   Maintenance of GitLab
+#   - Backup GitLab data
+#   - Update GitLab version
+#   - Shutdown GitLab
+#   - Cleanup garbage from filesystem
+#   - Cooling and fancy stuff
+#
+#   MikrocontrollerProjekte 2020
+#   https://www.youtube.com/c/MikrocontrollerProjekte
+#
+#   Visite my GitHub page to download this file:	
+#   https://github.com/MikrocontollerProjekte/GitLabRaspberryPi
+#
+#   http://gitlab/
+
+
+################## backup GitLab ##################
+# additional information:  https://docs.gitlab.com/ee/raketasks/backup_restore.html
+
+# create a backup of the GitLab system (does not store your configuration files!)
+sudo gitlab-backup create
+
+# backup manually the following files (warning: gitlab-secrets.json is essential to preserve your database encryption key):
+# - /etc/gitlab/gitlab-secrets.json
+# - /etc/gitlab/gitlab.rb
+
+# copy the backup files to e.g. a NAS (Network Attached Storage)
+
+
+
+################## update GitLab using a manually downloaded package ##################
+# additional information:  https://docs.gitlab.com/ee/update/README.html
+
+# search the latest GitLab package version you wish to install:  https://packages.gitlab.com/gitlab/raspberry-pi2
+
+# download the GitLab package
+curl -Lo gitlab-ce_12.9.2-ce.0_armhf.deb https://packages.gitlab.com/gitlab/raspberry-pi2/packages/raspbian/stretch/gitlab-ce_12.9.2-ce.0_armhf.deb/download.deb
+
+# update the GitLab installation
+sudo dpkg -i gitlab-ce_12.9.2-ce.0_armhf.deb
+
+################## shutdown GitLab server ##################
+# additional information:  https://docs.gitlab.com/omnibus/maintenance/README.html
+
+# stop all GitLab components
+sudo gitlab-ctl stop
+
+# shutdown the Raspberry Pi
+sudo shutdown -h 0
+
+
+
+################## cleanup garbage from filesystem ##################
+# additional information:  https://docs.gitlab.com/ee/raketasks/cleanup.html
+
+# check for local project upload files which don’t exist in the GitLab database
+sudo gitlab-rake gitlab:cleanup:project_uploads
+
+# remove local project upload files which don’t exist in the GitLab database
+sudo gitlab-rake gitlab:cleanup:project_uploads DRY_RUN=false
+
+# check for object store upload files which don’t exist in the GitLab database
+sudo gitlab-rake gitlab:cleanup:remote_upload_files
+
+# remove object store upload files which don’t exist in the GitLab database
+sudo gitlab-rake gitlab:cleanup:remote_upload_files DRY_RUN=false
+
+
+
+################## information about your GitLab installation / configuration ##################
+# additional information:  https://docs.gitlab.com/ee/administration/raketasks/maintenance.html
+
+# information about your GitLab installation and the system
+sudo gitlab-rake gitlab:env:info
+
+# check the GitLab configuration
+sudo gitlab-rake gitlab:check
+
+# get service status
+sudo gitlab-ctl status
+
+
+
+################## check CPU temperature ##################
+
+# install the latest version from github repository
+curl -Ls https://raw.githubusercontent.com/MilhouseVH/bcmstat/master/bcmstat.sh -o ~/bcmstat.sh
+
+# make it executable
+sudo chmod +x ~/bcmstat.sh
+
+# run script
+./bcmstat.sh pyexsTd1
+
+
+
+##################  fancy display for the GitLab server ##################
+
+# enable I2C interface with raspi-config -> 5. Interfacing Options -> P5 (I2C)
+sudo raspi-config 
+
+# stop all GitLab components
+sudo gitlab-ctl stop
+
+# reboot the Raspberry Pi
+sudo reboot
+
+# install some tools
+sudo apt-get install python-smbus i2c-tools python-pil
+
+# install GPIO lib 
+sudo apt-get install build-essential python-dev python-pip
+sudo pip install RPi.GPIO
+
+# clone the Adafruit SSD1306 lib for the I2C display
+sudo python -m pip install --upgrade pip setuptools wheel
+git clone https://github.com/adafruit/Adafruit_Python_SSD1306
+
+# install the Adafruit library
+cd Adafruit_Python_SSD1306
+sudo python setup.py install
+
+# find connected I2C devices
+i2cdetect -y 1
+
+# start the stats example
+cd examples
+sudo python stats.py
+
+# install GPIO lib 
+sudo apt-get install build-essential python-dev python-pip
+sudo pip install RPi.GPIO
+
+
+
+
