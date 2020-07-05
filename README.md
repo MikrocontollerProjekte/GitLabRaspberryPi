@@ -68,5 +68,34 @@ Download Instructions here: https://github.com/MikrocontollerProjekte/GitLabRasp
 <img src="images/part3.png" width="900">
 <br>
 
+<br>
+<br>
+<br>
+
+# Part 4: Maintenance of GitLab CE on a Raspberry Pi 4 (4GB)
+- Backup GitLab data
+- Update GitLab Version
+- Shutdown GitLab
+- Cleanup garbage from filesystem
+- Cooling and fancy stuff (OLED)
+
+<br>  
+Download Instructions here: https://github.com/MikrocontollerProjekte/GitLabRaspberryPi/blob/master/GitLabRaspberryPi.sh
+<br>
+<br>
+<b>Full YouTube video tutorial:</b>
+<br>
+<br>
+
+[![YouTube Video](http://img.youtube.com/vi/EGh1zK7B56Q/0.jpg)](http://www.youtube.com/watch?v=EGh1zK7B56Q "Usage of GitLab CE on a Raspberry Pi 4 (4GB)")
+
+
+<br>
+<br>
+<br>
+<img src="images/part4.png" width="900">
+<br>
+
 
 For more videos, visit: https://www.youtube.com/c/MikrocontrollerProjekte.
+
